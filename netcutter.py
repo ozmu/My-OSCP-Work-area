@@ -30,4 +30,4 @@ elif option == 2:
 else:
     print("Wrong value!")
 
-print(connect(user,passwd,ip_addr,val))
+connect(user,passwd,ip_addr,val)
