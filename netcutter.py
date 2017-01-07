@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""
+This code is written for ban the unwanted devices on local network. Generally, this settings (gateway host etc.) are specially for
+my computer and local network. 
 
+"""
 import telnetlib
 import getpass
 
@@ -9,7 +13,7 @@ def connect(user,passwd,ip_addr,option):
     tn.write(passwd.encode("utf-8") + b"\n")
     tn.write(b"iptables " + option.encode("utf-8") + b" INPUT -s "+ip_addr.encode("utf-8")+ b" -j DROP\n")
     tn.write(b"exit\n")
-    return tn.read_all()
+    return
 
 ip_addr= input("Victim's IP Adress: ")
 user = input("Gateway Interface Username: ")
